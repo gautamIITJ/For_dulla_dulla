@@ -24,16 +24,7 @@ def test(data,
          imgsz=640,
          conf_thres=0.001,
          iou_thres=0.6,  # for NMS
-         save_json=False,
-         single_cls=False,
-         augment=False,
-         verbose=False,
-         model=None,
-         dataloader=None,
-         save_dir=Path(''),  # for saving images
-         save_txt=False,  # for auto-labelling
-         save_hybrid=False,  # for hybrid auto-labelling
-         save_conf=False,  # save auto-label confidences
+         
          plots=True,
          wandb_logger=None,
          compute_loss=None,
@@ -61,6 +52,8 @@ def test(data,
         if trace:
             model = TracedModel(model, device, opt.img_size)
 
+    # Half
+    # Half
     # Half
     half = device.type != 'cpu' and half_precision  # half precision only supported on CUDA
     if half:
