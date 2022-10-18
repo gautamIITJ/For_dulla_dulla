@@ -19,17 +19,7 @@ from utils.torch_utils import select_device, time_synchronized, TracedModel
 
 
 def test(data,
-         weights=None,
-         batch_size=32,
-         imgsz=640,
-         conf_thres=0.001,
-         iou_thres=0.6,  # for NMS
          
-         plots=True,
-         wandb_logger=None,
-         compute_loss=None,
-         half_precision=True,
-         trace=False,
          is_coco=False):
     # Initialize/load model and set device
     training = model is not None
